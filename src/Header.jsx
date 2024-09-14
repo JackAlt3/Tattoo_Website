@@ -12,9 +12,9 @@ function Header() {
             top: 0, // Make sure to set the top value
             width: '100%',
             height: '100px',
-            backgroundColor: 'red',
+            backgroundColor: 'lightgray',
             //overflow: 'hidden',
-            position: 'fixed'    
+            //position: 'fixed'    
         }
 
         let left = {
