@@ -29,7 +29,6 @@ function Header() {
     top: 0,
     display: 'flex',
     alignItems: 'center', // Vertically center the content
-    justifyContent: 'space-between',
     width: '100%',
     height: isMobile ? '85px' : '100px',
     backgroundColor: 'lightgray',
@@ -37,15 +36,14 @@ function Header() {
   };
 
   const leftStyle = {
-    flex: '1',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
     width: isMobile ? '30%' : '50%',
+    //width: '50%',
+    display: 'inline-block',
+    verticalAlign: 'middle',
   };
 
   const rightStyle = {
-    width: isMobile ? '70%' : '',
+    width: isMobile ? '70%' : '50%',
     //width: '50%',
     display: 'inline-block',
     textAlign: 'right',
@@ -76,9 +74,9 @@ function Header() {
 
   const bittin = {
     borderRadius: '5px',
-    //marginBottom : '10px',
+    marginBottom : '10px',
     width:'100px', // Adjust button size based on mobile or desktop
-    padding: '20px 30px',
+    height:'20px',
     display: isMobile ? 'none' : '',
     //marginLeft: '10px',
   };
@@ -89,8 +87,7 @@ function Header() {
         <img src={Logo} alt="Logo" style={logoStyle} />
       </div>
       <div style={rightStyle}>
-        <div style={rightStyle}><button style={bittin}>Khoya hua</button></div>
-      
+      <button style={bittin}>Khoya hua</button>
       <img src={Location} alt="Location" style={imagr} /> 
       <img src={Whatsapp} alt="Whatsapp" style={buttonStyle} />  
       <img src={Phone} alt="Phone" style={buttonStyle} />

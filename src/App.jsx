@@ -1,14 +1,18 @@
 import { useState } from 'react'
 //import './App.css'
 import Header from './Header.jsx'
+import HeaderM from './HeaderMobile.jsx'
 import Starttxt from './Starttxt.jsx'
 import Midtxt from './Midtxt.jsx'
+import MidScroll from './midscroll.jsx'
 import Main from './assets/main.jpg'
 
 function App() {
 let test = {
-  height : "1000px",
-  backgroundImage: "C:/Users/Jason Pereira/OneDrive/Desktop/Tattoo/src/assets/Main.jpg",
+  width : "100%",
+  height : "1080px",
+  backgroundSize: '100% 100%',
+  backgroundImage: `url(${Main})`,
 }
 
 let gg = {
@@ -17,14 +21,21 @@ let gg = {
   objectFit: 'contain',
 }
   return (
-    <div>
-      <Header></Header>
-        <div style={test}>
-       <Midtxt/>
-        
-      </div>
-    </div>
+    <MidScroll />
   )
 }
 
 export default App
+
+/*
+    <div>
+      <Header></Header>
+        <div style={test}>
+          <Midtxt/>
+        </div>
+        <div>
+          <MidScroll />
+        </div>
+    </div>
+
+*/    
