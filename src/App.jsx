@@ -2,9 +2,8 @@ import { useState } from 'react'
 //import './App.css'
 import Header from './Header.jsx'
 import HeaderM from './HeaderMobile.jsx'
-import Starttxt from './Starttxt.jsx'
 import Midtxt from './Midtxt.jsx'
-import MidScroll from './midscroll.jsx'
+//import MidScroll from './midscroll.jsx'
 import Main from './assets/main.jpg'
 
 function App() {
@@ -21,7 +20,14 @@ let gg = {
   objectFit: 'contain',
 }
   return (
-    <MidScroll />
+    <div>
+    <HeaderM></HeaderM>
+      <div style={test}>
+        <Midtxt/>
+      </div>
+      <div>
+      </div>
+  </div>
   )
 }
 
