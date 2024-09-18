@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Header from './Header.jsx'
 import HeaderM from './HeaderMobile.jsx'
 import Midtxt from './Midtxt.jsx'
-//import MidScroll from './midscroll.jsx'
+import MidScroll from './midscroll.jsx'
 import Main from './assets/main.jpg'
 
 function App() {
@@ -26,6 +26,7 @@ let gg = {
         <Midtxt/>
       </div>
       <div>
+        <MidScroll/>
       </div>
   </div>
   )
