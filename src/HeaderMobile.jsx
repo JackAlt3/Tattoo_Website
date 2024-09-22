@@ -87,14 +87,11 @@ function Header() {
         <img src={Logo} alt="Logo" style={logoStyle} />
       </div>
       <div style={rightStyle}>
-      <button style={bittin}>Khoya hua</button>
-      <img src={Location} alt="Location" style={imagr} /> 
-      <img src={Whatsapp} alt="Whatsapp" style={buttonStyle} />  
-      <img src={Phone} alt="Phone" style={buttonStyle} />
+      <button style={bittin}>Khoya hua</button> 
+      <a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" ><img src={Location} alt="Location" style={imagr} /></a> 
+      <a href="http://api.whatsapp.com/send?phone=7507209441"><img src={Whatsapp} alt="Whatsapp" style={buttonStyle} /></a>
+      <a href="tel:+917507209441"><img src={Phone} alt="Phone" style={buttonStyle} /></a>
         <img src={Sidebar} alt="Sidebar" style={buttonStyle} />
-        
-        
-        
       </div>
     </div>
   );

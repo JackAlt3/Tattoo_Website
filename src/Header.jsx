@@ -1,3 +1,5 @@
+//THIS IS ONLY FOR TESTING :0
+
 import React, { useState, useEffect } from 'react';
 import Logo from './assets/logo.jpg';
 import Sidebar from './assets/sidebar.svg';
