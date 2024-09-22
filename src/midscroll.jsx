@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+/*import React, { useRef, useEffect } from 'react';
 import image1 from './assets/image1.jpg';
 import image2 from './assets/image2.jpg';
 import image3 from './assets/image3.jpg';
@@ -8,7 +8,7 @@ import image5 from './assets/image5.jpg';
 function MidScroll() {
   const images = [image1, image2, image3, image4, image5];
   const scrollRef = useRef(null);
-
+  
   const screenwidth = window.innerWidth;
 
   // Clone the images to create an infinite loop
@@ -16,20 +16,20 @@ function MidScroll() {
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
-    const scrollWidth = scrollContainer.scrollWidth / 2;
+    const totalScrollWidth = scrollContainer.scrollWidth / 2; // Half because we duplicate the images
 
     const handleScroll = () => {
-      if (scrollContainer.scrollLeft >= scrollWidth) {
-        // If the user reaches the end, reset to the beginning of the original images
-        scrollContainer.scrollLeft = 0;
-      } else if (scrollContainer.scrollLeft <= 0) {
-        // If the user scrolls back to the beginning, reset to the end
-        scrollContainer.scrollLeft = scrollWidth;
+      if (scrollContainer.scrollLeft >= totalScrollWidth) {
+        // When user reaches the end of the cloned array, reset to the start
+        scrollContainer.scrollLeft = 0; // Snap back to the beginning
+      } else if (scrollContainer.scrollLeft === 0) {
+        // If the user scrolls back to the start, snap to the end of the original array
+        scrollContainer.scrollLeft = totalScrollWidth;
       }
     };
 
     scrollContainer.addEventListener('scroll', handleScroll);
-    
+
     // Clean up event listener
     return () => scrollContainer.removeEventListener('scroll', handleScroll);
   }, []);
@@ -80,6 +80,61 @@ function MidScroll() {
             />
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+export default MidScroll;
+*/
+
+import React, { useRef, useState } from "react";
+import "./midScroll.css";
+
+function MidScroll() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef();
+
+  const SAMPLE_DATA = [
+    { id: "01", color: "#014f5e" },
+    { id: "02", color: "#015a6b" },
+    { id: "03", color: "#016679" },
+    { id: "04", color: "#017186" },
+    { id: "05", color: "#1a7f92" },
+    { id: "06", color: "#348d9e" },
+    { id: "07", color: "#4d9caa" },
+    { id: "08", color: "#67aab6" },
+    { id: "09", color: "#80b8c3" },
+  ];
+
+  const handleScroll = (scrollAmount) => {
+    const newScrollPosition = scrollPosition + scrollAmount;
+    setScrollPosition(newScrollPosition);
+    containerRef.current.scrollLeft = newScrollPosition;
+  };
+
+  return (
+    <div className="container">
+      <div
+        ref={containerRef}
+        style={{
+          width: "900px",
+          overflowX: "scroll",
+          scrollBehavior: "smooth",
+        }}
+      >
+        <div className="content-box">
+          {SAMPLE_DATA.map((item) => (
+            <div key={item.id} className="card" style={{ backgroundColor: item.color }}>
+              <p>{item.id}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="action-btns">
+        <button onClick={() => handleScroll(-200)}>Scroll Left</button>
+        <button onClick={() => handleScroll(200)}>Scroll Right</button>
       </div>
     </div>
   );

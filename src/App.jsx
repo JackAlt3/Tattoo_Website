@@ -25,7 +25,7 @@ let gg = {
       <div style={test}>
         <Midtxt/>
       </div>
-      <div>
+      <div style = {{overflow : 'hidden'}}>
         <MidScroll/>
       </div>
   </div>
