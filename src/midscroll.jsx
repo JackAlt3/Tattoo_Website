@@ -1,91 +1,4 @@
-/*import React, { useRef, useEffect } from 'react';
-import image1 from './assets/image1.jpg';
-import image2 from './assets/image2.jpg';
-import image3 from './assets/image3.jpg';
-import image4 from './assets/image4.jpg';
-import image5 from './assets/image5.jpg';
-
-function MidScroll() {
-  const images = [image1, image2, image3, image4, image5];
-  const scrollRef = useRef(null);
-  
-  const screenwidth = window.innerWidth;
-
-  // Clone the images to create an infinite loop
-  const clonedImages = [...images, ...images]; // Duplicate the images array
-
-  useEffect(() => {
-    const scrollContainer = scrollRef.current;
-    const totalScrollWidth = scrollContainer.scrollWidth / 2; // Half because we duplicate the images
-
-    const handleScroll = () => {
-      if (scrollContainer.scrollLeft >= totalScrollWidth) {
-        // When user reaches the end of the cloned array, reset to the start
-        scrollContainer.scrollLeft = 0; // Snap back to the beginning
-      } else if (scrollContainer.scrollLeft === 0) {
-        // If the user scrolls back to the start, snap to the end of the original array
-        scrollContainer.scrollLeft = totalScrollWidth;
-      }
-    };
-
-    scrollContainer.addEventListener('scroll', handleScroll);
-
-    // Clean up event listener
-    return () => scrollContainer.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <div>
-      <div
-        style={{
-          backgroundColor: 'darkred',
-          padding: 10,
-          borderBottomRightRadius: 15,
-          borderBottomLeftRadius: 15,
-          textAlign: 'center',
-        }}
-      >
-        <h2 style={{ color: 'white', fontSize: 25 }}>Marvel Wallpapers</h2>
-      </div>
-      <div
-        ref={scrollRef}
-        style={{
-          display: 'flex',
-          overflowX: 'scroll',
-          scrollSnapType: 'x mandatory',
-          scrollBehavior: 'smooth',
-          whiteSpace: 'nowrap',
-        }}
-      >
-        {clonedImages.map((source, index) => (
-          <div
-            key={index}
-            style={{
-              flex: '0 0 auto',
-              width: `${screenwidth}px`,
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              scrollSnapAlign: 'start',
-            }}
-          >
-            <img
-              src={source}
-              alt={`Marvel wallpaper ${index + 1}`}
-              style={{
-                width: `${screenwidth - 50}px`,
-                height: `${screenwidth - 50}px`,
-                objectFit: 'contain',
-              }}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default MidScroll;
+/*
 
 
 if encountered width problem ----> style = {{width : isMobile ? '85px' : '100px',}}
@@ -189,9 +102,9 @@ function MidScroll() {
       setDisplayData((prevData) => [...prevData, ...SAMPLE_DATA]);
     } else if (container.scrollLeft <= threshold) {
       // Scroll reached near the left end, prepend more items
-      setDisplayData((prevData) => [...SAMPLE_DATA, ...prevData]);
+      //setDisplayData((prevData) => [...SAMPLE_DATA, ...prevData]);
       // Adjust scroll position to maintain the user's view
-      container.scrollLeft += SAMPLE_DATA.length * 220; // Adjust based on card width + gap
+      //container.scrollLeft += SAMPLE_DATA.length * 220; // Adjust based on card width + gap
     }
   };
 
@@ -227,6 +140,7 @@ function MidScroll() {
         <button onClick={() => handleScroll(-200)}>Scroll Left</button>
         <button onClick={() => handleScroll(200)}>Scroll Right</button>
       </div>
+      <h1>//Can use two finger scroll</h1>
     </div>
   );
 }

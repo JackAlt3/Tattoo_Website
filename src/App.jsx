@@ -28,6 +28,7 @@ let gg = {
       <div style = {{overflow : 'hidden', 
       }}>
         <MidScroll/>
+        <h1><a href='/about'>Router</a></h1>
       </div>
   </div>
   )

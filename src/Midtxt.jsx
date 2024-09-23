@@ -34,7 +34,7 @@ function Midtext() {
 
     return (
         <div style={parentStyle}>
-            <div style={mid}>Bus Bhai Tuth gaya mai to jyada nahi hota ab</div>
+            <div style={mid}>//ADD YOUR TXT</div>
         </div>
     );
 }
