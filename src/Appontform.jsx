@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, Calendar, ChevronDown, Phone, MessageSquare, CheckCircle } from 'lucide-react';
+import { X, ChevronDown, Phone, MessageSquare, CheckCircle } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 // Styles moved outside the component
 const formStyle = {
@@ -60,14 +61,46 @@ const Appoint = () => {
     });
   };
 
+  const sendEmail = () => {
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      date: formData.date,
+      time: formData.time,
+    };
+
+    console.log('Sending email with the following parameters:', templateParams);
+
+    emailjs.send('service_pvzy664', 'template_xnnx0rr', templateParams, '4bUkcK0263TBtIsVb')
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        alert('Appointment booked successfully!');
+      })
+      .catch((err) => {
+        console.error('Failed to send email. Error:', err);
+        alert('There was an error booking your appointment. Please try again.');
+      });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.phone) {
       alert('Please fill in all required fields.');
       return;
     }
-    // Submit logic here
-    console.log('Form Submitted:', formData);
+    
+    // Call sendEmail function to send the email via EmailJS
+    sendEmail();
+
+    // Reset the form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      date: '',
+      time: '',
+    });
   };
 
   return (
