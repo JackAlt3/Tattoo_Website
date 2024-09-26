@@ -12,18 +12,24 @@
 .content-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
   white-space: nowrap; /* Prevent wrapping of cards */
 }
 
 .card {
-  width: 200px; /* Fixed card width */
-  height: 200px; /* Fixed card height */
+  width: 250px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* Prevent shrinking */
+  flex-shrink: 0;
+  background-size: cover;         /* Now set in the CSS */
+  background-position: center;    /* Now set in the CSS */
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
 }
+
 
 .card p {
   font-size: 70px;

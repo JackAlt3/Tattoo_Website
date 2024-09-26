@@ -60,24 +60,29 @@ function MidScroll() {
 export default MidScroll;
 */
 
+
 import React, { useRef, useState, useEffect } from "react";
 import useIsMobile from "./mobilefinder";
 import "./midScroll.css";
+import image1 from './assets/image1.jpg';
+import image2 from './assets/image2.jpg';
+import image3 from './assets/image3.jpg';
+import image4 from './assets/image4.jpg';
+import image5 from './assets/image5.jpg';
+import image6 from './assets/image6.jpg';
 
 function MidScroll() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const containerRef = useRef();
+  const isMobile = useIsMobile(); 
 
   const SAMPLE_DATA = [
-    { id: "01", color: "#014f5e" },
-    { id: "02", color: "#015a6b" },
-    { id: "03", color: "#016679" },
-    { id: "04", color: "#017186" },
-    { id: "05", color: "#1a7f92" },
-    { id: "06", color: "#348d9e" },
-    { id: "07", color: "#4d9caa" },
-    { id: "08", color: "#67aab6" },
-    { id: "09", color: "#80b8c3" },
+    { id: "01", image: image1 , link : "http://www.google.com"},
+    { id: "02", image: image2 , link : "www.youtube.com"},
+    { id: "03", image: image3 , link : "www.google.com"},
+    { id: "04", image: image4 , link : "www.google.com"},
+    { id: "05", image: image5 , link : "www.google.com"},
+    { id: "06", image: image6 , link : "www.google.com"},
   ];
 
   // Double the content to simulate infinite scroll
@@ -121,7 +126,7 @@ function MidScroll() {
       <div
         ref={containerRef}
         style={{
-          width: "900px",
+          width: "100%" ,
           overflowX: "scroll",
           scrollBehavior: "smooth",
           whiteSpace: "nowrap", // Ensure content scrolls horizontally
@@ -129,13 +134,14 @@ function MidScroll() {
       >
         <div className="content-box">
           {displayData.map((item, index) => (
-            <div key={index} className="card" style={{ backgroundColor: item.color }}>
+            <a href={item.link}>
+            <div key={index} className="card" style={{ backgroundImage: `url(${item.image})`}}>
               <p>{item.id}</p>
             </div>
+            </a>
           ))}
         </div>
       </div>
-
       <div className="action-btns">
         <button onClick={() => handleScroll(-200)}>Scroll Left</button>
         <button onClick={() => handleScroll(200)}>Scroll Right</button>
