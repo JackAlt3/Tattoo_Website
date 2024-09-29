@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
 function Midtext() {
+  const texts = ["Animation", "NEXT", "React", "Component"]; // Array of texts
+  const [currentTextIndex, setCurrentTextIndex] = useState(0); // Index of the current text
   const [letters, setLetters] = useState([]); // State to store letters
   const [isDisappearing, setIsDisappearing] = useState(false); // State to handle disappearance
 
   useEffect(() => {
-    const titleText = "Animation"; // The text we want to animate
+    // Set letters for the current text
+    const titleText = texts[currentTextIndex]; 
     const lettersArray = titleText.split("").map((ltr, idx) => ({
       letter: ltr,
       delay: `${idx * 100}ms`
@@ -19,7 +22,19 @@ function Midtext() {
     }, 5000); // 5 seconds delay before disappearing
 
     return () => clearTimeout(timer); // Cleanup timeout on component unmount
-  }, []);
+  }, [currentTextIndex, isDisappearing]); // Depend on currentTextIndex and isDisappearing
+
+  useEffect(() => {
+    if (isDisappearing) {
+      // Wait for fade-out to finish before switching to the next text
+      const timer = setTimeout(() => {
+        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cycle through texts
+        setIsDisappearing(false); // Reset disappearance state
+      }, 500); // Match this duration to the fade-out animation duration
+
+      return () => clearTimeout(timer); // Cleanup on component unmount
+    }
+  }, [isDisappearing]); // Depend only on isDisappearing
 
   let parentStyle = {
     width: '50%',
@@ -100,4 +115,3 @@ function Midtext() {
 }
 
 export default Midtext;
-
