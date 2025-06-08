@@ -6,7 +6,7 @@ import Midtxt from './Midtext.jsx'
 import NeonText from './neontext.jsx';
 import MidScroll from './midscroll.jsx'
 import Main from './assets/background.jpg'
-
+import Discover from './discover.jsx';
 
 function App() {
 let test = {
@@ -30,10 +30,9 @@ let gg = {
       {/* rest of your site content */}
       <div style={test}>
         <Navbar />
-        {/* <Midtxt> </Midtxt> */}
         <NeonText/>
-        <Midtxt/>
       </div>
+      <Discover></Discover>
       <div style = {{overflow : 'hidden', 
       }}>
         <MidScroll/>

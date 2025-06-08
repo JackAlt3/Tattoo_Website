@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Phone as PhoneIcon, Instagram, MessageCircleMore } from 'lucide-react';
-import Logo from './assets/logoz.png';
+import Logo from './assets/logocrop.png';
 // import Sidebar from './assets/sidebar.svg';
 import Whatsapp from './assets/whatsapp.svg';
 import Phone from './assets/phone.svg';
@@ -51,10 +51,10 @@ function Header() {
   };
 
   const logoStyle = {
-    //paddingTop: '10px',
+    paddingTop: '20px',
     paddingLeft: '10px',
-    width: isMobile ? '155px' : '250px', // Adjust based on mobile or desktop
-    height: isMobile ? '65px' : '80px',
+    width: isMobile ? '155px' : '170px', // Adjust based on mobile or desktop
+    height: isMobile ? '65px' : '50px',
   };
 
   const buttonStyle = {
