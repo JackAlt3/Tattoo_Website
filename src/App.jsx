@@ -2,6 +2,7 @@ import { useState } from 'react'
 //import './App.css'
 import Header from './Header.jsx'
 import HeaderM from './HeaderMobile.jsx'
+import Navbar from './Navbar';
 import Midtxt from './Midtext.jsx'
 import MidScroll from './midscroll.jsx'
 import Main from './assets/background.jpg'
@@ -24,7 +25,10 @@ let gg = {
   return (
     <div>
     <HeaderM></HeaderM>
+          
+      {/* rest of your site content */}
       <div style={test}>
+        <Navbar />
         <Midtxt> </Midtxt>
       </div>
       <div style = {{overflow : 'hidden', 

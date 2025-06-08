@@ -89,22 +89,19 @@ function Header() {
       </div>
       <div style={rightStyle}>
 <a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <MapPin color="white" size={isMobile ? 18 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
-  {/* <img src={Location} alt="Location" style={imagr} /> */}
+  <MapPin color="white" size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
 <a href="http://api.whatsapp.com/send?phone=7507209441" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <MessageCircleMore color="white" size={isMobile ? 18 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
-  {/* <img src={Whatsapp} alt="Whatsapp" style={buttonStyle} /> */}
+  <MessageCircleMore color="white" size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
 <a href="tel:+917507209441" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <PhoneIcon color="white" size={isMobile ? 18 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
-  {/* <img src={Phone} alt="Phone" style={buttonStyle} /> */}
+  <PhoneIcon color="white" size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
-<a href="https://www.instagram.com" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <Instagram color="white" size={isMobile ? 18 : 24} style={{ verticalAlign: 'middle' }} />
+<a href="https://www.instagram.com" style={{ marginLeft: '10px', verticalAlign: 'middle' ,paddingRight: '15px', }}>
+  <Instagram color="white" size={isMobile ? 24 : 24} style={{ verticalAlign: 'middle' }} />
 </a>
       </div>
     </div>
