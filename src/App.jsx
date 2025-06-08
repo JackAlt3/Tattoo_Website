@@ -2,7 +2,7 @@ import { useState } from 'react'
 //import './App.css'
 import Header from './Header.jsx'
 import HeaderM from './HeaderMobile.jsx'
-import Midtxt from './fkthis.jsx'
+import Midtxt from './Midtext.jsx'
 import MidScroll from './midscroll.jsx'
 import Main from './assets/main.jpg'
 
@@ -23,7 +23,7 @@ let gg = {
     <div>
     <HeaderM></HeaderM>
       <div style={test}>
-        <Midtxt/>
+        <Midtxt> </Midtxt>
       </div>
       <div style = {{overflow : 'hidden', 
       }}>

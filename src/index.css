@@ -1,6 +1,8 @@
 body {
-  background-color: white;
-  
+  /*background-image: url('./assets/back.jpeg');*/
+  background-size: cover;         /* Now set in the CSS */
+  background-position: center;    /* Now set in the CSS */
+  background-repeat: no-repeat;
   border: none;
   box-sizing: border-box;
 }

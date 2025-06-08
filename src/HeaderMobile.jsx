@@ -30,8 +30,8 @@ function Header() {
     display: 'flex',
     alignItems: 'center', // Vertically center the content
     width: '100%',
-    height: isMobile ? '85px' : '100px',
-    backgroundColor: 'lightgray',
+    height: isMobile ? '35px' : '45px',
+    backgroundColor: 'black',
     zIndex: 1,
   };
 

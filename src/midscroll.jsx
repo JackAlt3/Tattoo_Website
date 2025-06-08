@@ -122,7 +122,7 @@ function MidScroll() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" style = {{background: "transparent"}}>
       <div
         ref={containerRef}
         style={{
@@ -132,7 +132,7 @@ function MidScroll() {
           whiteSpace: "nowrap", // Ensure content scrolls horizontally
         }}
       >
-        <div className="content-box">
+        <div className="content-box" style = {{opacity: '1'}}>
           {displayData.map((item, index) => (
             <a href={item.link}>
             <div key={index} className="card" style={{ backgroundImage: `url(${item.image})`}}>

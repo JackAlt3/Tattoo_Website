@@ -34,7 +34,7 @@ function Header() {
     justifyContent: 'space-between',
     width: '100%',
     height: isMobile ? '85px' : '100px',
-    backgroundColor: 'lightgray',
+    backgroundColor: 'black',
     zIndex: 1,
   };
 
