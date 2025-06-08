@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Moontime';
+  src: url('/assets/moontime.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.neon-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  background-color: blue;
+  background: url('/path-to-your-background.jpg') center/cover no-repeat; /* Optional */
+  min-height: 300px;
+}
+
+.neon-text {
+  font-family: 'Moontime', cursive;
+  font-size: 4.5rem;
+  color: #fff9c4;
+  text-shadow:
+    0 0 5px #fff176,
+    0 0 10px #ffeb3b,
+    0 0 20px #fdd835,
+    0 0 40px #fdd835,
+    0 0 80px #fdd835;
+  line-height: 1;
+  max-width: 700px;
+}

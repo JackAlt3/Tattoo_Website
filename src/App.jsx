@@ -1,9 +1,9 @@
 import { useState } from 'react'
-//import './App.css'
-import Header from './Header.jsx'
+import './App.css'
 import HeaderM from './HeaderMobile.jsx'
 import Navbar from './Navbar';
 import Midtxt from './Midtext.jsx'
+import NeonText from './neontext.jsx';
 import MidScroll from './midscroll.jsx'
 import Main from './assets/background.jpg'
 
@@ -29,7 +29,8 @@ let gg = {
       {/* rest of your site content */}
       <div style={test}>
         <Navbar />
-        <Midtxt> </Midtxt>
+        {/* <Midtxt> </Midtxt> */}
+        <NeonText/>
       </div>
       <div style = {{overflow : 'hidden', 
       }}>
