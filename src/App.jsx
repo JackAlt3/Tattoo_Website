@@ -4,14 +4,16 @@ import Header from './Header.jsx'
 import HeaderM from './HeaderMobile.jsx'
 import Midtxt from './Midtext.jsx'
 import MidScroll from './midscroll.jsx'
-import Main from './assets/main.jpg'
+import Main from './assets/background.jpg'
 
 function App() {
 let test = {
-  width : "100%",
-  height : "1080px",
-  backgroundSize: '100% 100%',
-  backgroundImage: `url(${Main})`,
+    width: '100%',
+    height: '100vh', // Full screen height
+    backgroundSize: 'cover', // Maintain aspect ratio and cover
+    backgroundPosition: 'center', // Center the image
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${Main})`,
 }
 
 let gg = {

@@ -1,6 +1,7 @@
 //THIS IS ONLY FOR TESTING :0
 
 import React, { useState, useEffect } from 'react';
+import { MapPin, PhoneCall, Instagram, MessageCircleMore } from 'lucide-react';
 import Logo from './assets/logo.jpg';
 import Sidebar from './assets/sidebar.svg';
 import Whatsapp from './assets/whatsapp.svg';
@@ -87,16 +88,20 @@ function Header() {
 
   return (
     <div style={containerStyle}>
-      <div style={leftStyle}>
-        <img src={Logo} alt="Logo" style={logoStyle} />
-      </div>
+      {/* <div style={leftStyle}> */}
+        {/* <img src={Logo} alt="Logo" style={logoStyle} /> */}
+      {/* </div> */}
       <div style={rightStyle}>
-        <div style={rightStyle}><button style={bittin}>Khoya hua</button></div>
+        {/* <div style={rightStyle}><button style={bittin}>Khoya hua</button></div> */}
       
-      <img src={Location} alt="Location" style={imagr} /> 
-      <img src={Whatsapp} alt="Whatsapp" style={buttonStyle} />  
-      <img src={Phone} alt="Phone" style={buttonStyle} />
-        <img src={Sidebar} alt="Sidebar" style={buttonStyle} />
+      {/* <img src={Location} alt="Location" style={imagr} />  */}
+      {/* <img src={Whatsapp} alt="Whatsapp" style={buttonStyle} />   */}
+      {/* <img src={Phone} alt="Phone" style={buttonStyle} /> */}
+        {/* <img src={Sidebar} alt="Sidebar" style={buttonStyle} /> */}
+      <MapPin size={isMobile ? 20 : 30} color="white" style={{ marginLeft: '10px', verticalAlign: 'middle' }} />
+      <MessageCircleMore size={isMobile ? 20 : 30} color="white" style={{ marginLeft: '10px', verticalAlign: 'middle' }} />
+      <PhoneCall size={isMobile ? 20 : 30} color="white" style={{ marginLeft: '10px', verticalAlign: 'middle' }} />
+      <Instagram size={isMobile ? 20 : 30} color="white" style={{ marginLeft: '10px', verticalAlign: 'middle' }} />
         
         
         

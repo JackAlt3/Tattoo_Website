@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { MapPin, Phone as PhoneIcon, Instagram, MessageCircleMore } from 'lucide-react';
 import Logo from './assets/logo.jpg';
-import Sidebar from './assets/sidebar.svg';
+// import Sidebar from './assets/sidebar.svg';
 import Whatsapp from './assets/whatsapp.svg';
 import Phone from './assets/phone.svg';
 import Location from './assets/location.svg';
@@ -87,11 +88,24 @@ function Header() {
         <img src={Logo} alt="Logo" style={logoStyle} />
       </div>
       <div style={rightStyle}>
-        <a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" ><button style={bittin}>Locate us</button></a> 
-        <a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" ><img src={Location} alt="Location" style={imagr} /></a> 
-        <a href="http://api.whatsapp.com/send?phone=7507209441"><img src={Whatsapp} alt="Whatsapp" style={buttonStyle} /></a>
-        <a href="tel:+917507209441"><img src={Phone} alt="Phone" style={buttonStyle} /></a>
-        <img src={Sidebar} alt="Sidebar" style={buttonStyle} />
+<a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <MapPin color="white" size={isMobile ? 18 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+  {/* <img src={Location} alt="Location" style={imagr} /> */}
+</a>
+
+<a href="http://api.whatsapp.com/send?phone=7507209441" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <MessageCircleMore color="white" size={isMobile ? 18 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+  {/* <img src={Whatsapp} alt="Whatsapp" style={buttonStyle} /> */}
+</a>
+
+<a href="tel:+917507209441" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <PhoneIcon color="white" size={isMobile ? 18 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+  {/* <img src={Phone} alt="Phone" style={buttonStyle} /> */}
+</a>
+
+<a href="https://www.instagram.com" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <Instagram color="white" size={isMobile ? 18 : 24} style={{ verticalAlign: 'middle' }} />
+</a>
       </div>
     </div>
   );
