@@ -11,8 +11,10 @@
   align-items: center;
   text-align: center;
   padding: 40px;
-  background-color: blue;
-  background: url('/path-to-your-background.jpg') center/cover no-repeat; /* Optional */
+  padding-top: 60px;
+  padding-top: 100px; /* increased from 60px */
+  /* background-color: blue; */
+  /* background: url('/path-to-your-background.jpg') center/cover no-repeat; Optional */
   min-height: 300px;
 }
 

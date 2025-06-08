@@ -7,6 +7,7 @@ import NeonText from './neontext.jsx';
 import MidScroll from './midscroll.jsx'
 import Main from './assets/background.jpg'
 
+
 function App() {
 let test = {
     width: '100%',
@@ -14,7 +15,7 @@ let test = {
     backgroundSize: 'cover', // Maintain aspect ratio and cover
     backgroundPosition: 'center', // Center the image
     backgroundRepeat: 'no-repeat',
-    backgroundImage: `url(${Main})`,
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Main})`,
 }
 
 let gg = {
@@ -31,6 +32,7 @@ let gg = {
         <Navbar />
         {/* <Midtxt> </Midtxt> */}
         <NeonText/>
+        <Midtxt/>
       </div>
       <div style = {{overflow : 'hidden', 
       }}>
@@ -42,16 +44,4 @@ let gg = {
 }
 
 export default App
-
-/*
-    <div>
-      <Header></Header>
-        <div style={test}>
-          <Midtxt/>
-        </div>
-        <div>
-          <MidScroll />
-        </div>
-    </div>
-
-*/    
+   

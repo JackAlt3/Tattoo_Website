@@ -1,65 +1,62 @@
 import React, { useEffect, useState } from 'react';
 
 function Midtext() {
-  const texts = ["Animation", "NEXT", "React", "Component"]; // Array of texts
-  const [currentTextIndex, setCurrentTextIndex] = useState(0); // Index of the current text
-  const [letters, setLetters] = useState([]); // State to store letters
-  const [isDisappearing, setIsDisappearing] = useState(false); // State to handle disappearance
+  const texts = [
+    "you.", "your story.", "your vibe.", "your soul.", "your scars.",
+    "your journey.", "your fire.", "your truth.", "your shadow.", 
+    "your art.", "your edge.", "your chaos.", 
+    "your peace.", "your past.", "your future."
+  ];
+
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [letters, setLetters] = useState([]);
+  const [isDisappearing, setIsDisappearing] = useState(false);
 
   useEffect(() => {
-    // Set letters for the current text
-    const titleText = texts[currentTextIndex]; 
+    const titleText = texts[currentTextIndex];
     const lettersArray = titleText.split("").map((ltr, idx) => ({
-      letter: ltr,
+      letter: ltr === " " ? "\u00A0" : ltr,
       delay: `${idx * 100}ms`
     }));
-
     setLetters(lettersArray);
 
-    // Trigger the disappearing animation after 5 seconds
     const timer = setTimeout(() => {
-      setIsDisappearing(true); // Trigger the disappear animation
-    }, 5000); // 5 seconds delay before disappearing
+      setIsDisappearing(true);
+    }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup timeout on component unmount
-  }, [currentTextIndex, isDisappearing]); // Depend on currentTextIndex and isDisappearing
+    return () => clearTimeout(timer);
+  }, [currentTextIndex, isDisappearing]);
 
   useEffect(() => {
     if (isDisappearing) {
-      // Wait for fade-out to finish before switching to the next text
       const timer = setTimeout(() => {
-        setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length); // Cycle through texts
-        setIsDisappearing(false); // Reset disappearance state
-      }, 500); // Match this duration to the fade-out animation duration
+        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+        setIsDisappearing(false);
+      }, 500);
 
-      return () => clearTimeout(timer); // Cleanup on component unmount
+      return () => clearTimeout(timer);
     }
-  }, [isDisappearing]); // Depend only on isDisappearing
-
-  let parentStyle = {
-    width: '50%',
-    height: '20vh',
-    display: 'flex',
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'center',
-  };
+  }, [isDisappearing]);
 
   return (
-    <div style={parentStyle}>
-      {/* Embedded CSS */}
+    <span style={{ display: 'inline-block' }}>
       <style>{`
-        * {
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
+        @font-face {
+          font-family: 'Moontime';
+          src: url('/assets/moontime.ttf') format('truetype');
         }
 
         .title {
-          font-size: 5rem;
-          text-transform: uppercase;
-          font-family: "Oswald", sans-serif;
-          white-space: nowrap; /* Prevent text wrapping */
+          font-family: 'Moontime', cursive;
+          font-size: 4.5rem;
+          color: #fff9c4;
+          white-space: nowrap;
+          text-shadow:
+            0 0 5px #fff176,
+            0 0 10px #ffeb3b,
+            0 0 20px #fdd835,
+            0 0 40px #fdd835,
+            0 0 80px #fdd835;
         }
 
         .title .ltr {
@@ -69,7 +66,7 @@ function Midtext() {
         }
 
         .title.disappearing .ltr {
-          opacity: 1; /* Ensure opacity is 1 before animation */
+          opacity: 1;
           animation: fade-out 500ms ease-in-out var(--delay) forwards;
         }
 
@@ -86,7 +83,7 @@ function Midtext() {
 
         @keyframes fade-out {
           from {
-            transform: translateY(0); /* Start from the final position */
+            transform: translateY(0);
             opacity: 1;
           }
           to {
@@ -96,22 +93,20 @@ function Midtext() {
         }
       `}</style>
 
-      {/* Title with animated letters */}
-      <div className={`title ${isDisappearing ? 'disappearing' : ''}`}>
+      <span className={`title ${isDisappearing ? 'disappearing' : ''}`}>
         {letters.map((ltrObj, idx) => (
           <span
             key={idx}
             className="ltr"
-            style={{ 
-              "--delay": isDisappearing ? `${(letters.length - idx - 1) * 100}ms` : ltrObj.delay 
-            }}
+            style={{ "--delay": isDisappearing ? `${(letters.length - idx - 1) * 100}ms` : ltrObj.delay }}
           >
             {ltrObj.letter}
           </span>
         ))}
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }
 
 export default Midtext;
+

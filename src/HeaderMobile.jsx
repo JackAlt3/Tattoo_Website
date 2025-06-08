@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Phone as PhoneIcon, Instagram, MessageCircleMore } from 'lucide-react';
-import Logo from './assets/logo.jpg';
+import Logo from './assets/logoz.png';
 // import Sidebar from './assets/sidebar.svg';
 import Whatsapp from './assets/whatsapp.svg';
 import Phone from './assets/phone.svg';
