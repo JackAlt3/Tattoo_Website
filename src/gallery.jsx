@@ -109,9 +109,9 @@ function Gallery() {
       `}</style>
       <Navbar />
       <div className="gallery-container">
-        <h1 className="gallery-main-title">Our Portfolio</h1>
+        <h1 className="gallery-main-title"></h1>
         <div className="gallery-description">
-          Welcome to the INKROVERT gallery, a showcase of diverse styles and personal stories brought to life. Each tattoo is a unique collaboration, meticulously crafted with passion, precision, and the highest artistic standards. Explore our portfolio and find inspiration for your own inked narrative.
+          
         </div>
         <div className="gallery-filters">
           {types.map(type => (
