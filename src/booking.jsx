@@ -20,83 +20,99 @@ function BookAppointment() {
         }
         .book-title {
           font-family: 'Playfair Display', serif;
-          font-size: 2.5rem;
+          font-size: 2.7rem;
           font-weight: bold;
           text-align: center;
-          margin-top: 32px;
-          margin-bottom: 12px;
+          margin-top: 36px;
+          margin-bottom: 14px;
+          letter-spacing: 1px;
         }
         .book-desc {
           font-family: 'Playfair Display', serif;
-          font-size: 1.1rem;
+          font-size: 1.13rem;
           color: #e6e6e6;
           text-align: center;
           max-width: 600px;
-          margin: 0 auto 36px auto;
-          line-height: 1.5;
+          margin: 0 auto 38px auto;
+          line-height: 1.6;
         }
         .book-form-wrapper {
-          background: #18191a;
-          border-radius: 8px;
-          max-width: 600px;
-          margin: 0 auto 40px auto;
-          padding: 32px 28px 24px 28px;
-          box-shadow: 0 2px 16px 0 rgba(0,0,0,0.15);
+          background: rgba(24,25,26,0.98);
+          border-radius: 18px;
+          max-width: 900px;
+          margin: 0 auto 48px auto;
+          padding: 48px 36px 36px 36px;
+          box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25), 0 1.5px 8px 0 rgba(255,215,0,0.04);
+          border: 1.5px solid #232323;
         }
         .book-form-row {
           display: flex;
-          gap: 18px;
-          margin-bottom: 18px;
+          gap: 32px;
+          margin-bottom: 32px;
         }
         .book-form-row > div {
           flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
         }
         .book-label {
-          font-size: 0.98rem;
-          font-weight: 600;
-          margin-bottom: 6px;
+          font-size: 1.08rem;
+          font-weight: 700;
+          margin-bottom: 4px;
           display: block;
           color: #fff;
           font-family: 'Inter', Arial, sans-serif;
+          letter-spacing: 0.2px;
         }
         .book-input, .book-textarea, .book-select {
           width: 100%;
-          padding: 10px 12px;
-          border-radius: 4px;
-          border: none;
-          background: #222;
+          padding: 16px 16px;
+          border-radius: 8px;
+          border: 1.5px solid #232323;
+          background: #18191a;
           color: #fff;
-          font-size: 1rem;
-          margin-bottom: 4px;
+          font-size: 1.08rem;
+          margin-bottom: 0;
           font-family: 'Inter', Arial, sans-serif;
+          transition: border 0.2s, box-shadow 0.2s;
+          box-shadow: 0 1.5px 8px 0 rgba(255,215,0,0.03);
         }
         .book-input:focus, .book-textarea:focus, .book-select:focus {
-          outline: 2px solid #FFD700;
+          outline: none;
+          border: 1.5px solid #FFD700;
+          box-shadow: 0 0 0 2px rgba(255,215,0,0.15);
         }
         .book-textarea {
-          min-height: 70px;
+          min-height: 120px;
           resize: vertical;
         }
         .book-hint {
-          font-size: 0.85rem;
+          font-size: 0.95rem;
           color: #aaa;
-          margin-bottom: 10px;
+          margin-bottom: 12px;
+          margin-top: 6px;
         }
         .book-btn {
-          background: #e6e6e6;
-          color: #181818;
-          font-weight: 600;
+          background: linear-gradient(90deg, #FFD700 0%, #ffea70 100%);
+          color: #fff !important;
+          font-weight: 700;
           border: none;
-          border-radius: 4px;
-          padding: 12px 24px;
-          font-size: 1rem;
-          margin-top: 10px;
+          border-radius: 8px;
+          padding: 18px 0;
+          font-size: 1.15rem;
+          margin-top: 24px;
+          width: 100%;
+          box-shadow: 0 2px 12px 0 rgba(255,215,0,0.10);
           cursor: pointer;
-          transition: background 0.2s;
+          letter-spacing: 0.5px;
+          transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+          text-align: center;
         }
         .book-btn:hover {
-          background: #FFD700;
-          color: #181818;
+          background: linear-gradient(90deg, #ffe066 0%, #FFD700 100%);
+          color: #fff;
+          box-shadow: 0 4px 24px 0 rgba(255,215,0,0.18);
         }
         /* Footer styles */
         .footer {
@@ -165,9 +181,21 @@ function BookAppointment() {
           .book-form-wrapper {
             padding: 18px 6vw 18px 6vw;
           }
+          .book-form-row {
+            flex-direction: column;
+            gap: 0;
+          }
+        }
+        @media (max-width: 600px) {
+          .book-form-wrapper {
+            padding: 12px 2vw 12px 2vw;
+          }
+          .book-title {
+            font-size: 2rem;
+          }
         }
       `}</style>
-      <HeaderM></HeaderM>
+      <HeaderM />
       <Navbar />
       <div className="book-container">
         <div className="book-title">Book Your Appointment</div>
@@ -182,7 +210,7 @@ function BookAppointment() {
             </div>
             <div>
               <label className="book-label">Email Address</label>
-              <input className="book-input" type="email" placeholder="you@email.com" required />
+              <input className="book-input" type="email" placeholder="your.email@example.com" required />
             </div>
           </div>
           <div className="book-form-row">
@@ -194,7 +222,7 @@ function BookAppointment() {
           <div className="book-form-row">
             <div>
               <label className="book-label">Preferred Date</label>
-              <input className="book-input" type="date" />
+              <input className="book-input" type="date" placeholder="Pick a date" />
             </div>
             <div>
               <label className="book-label">Preferred Time</label>
@@ -206,19 +234,11 @@ function BookAppointment() {
               </select>
             </div>
           </div>
-          <div>
-            <label className="book-label">Tattoo Idea / Description</label>
-            <textarea className="book-textarea" placeholder="Describe your tattoo idea, including any references, style, elements, etc." required />
-            <div className="book-hint">The more detail, the better we can prepare for your consultation.</div>
-          </div>
           <div className="book-form-row">
-            <div>
-              <label className="book-label">Placement (Optional)</label>
-              <input className="book-input" type="text" placeholder="e.g., Forearm, Back, Ankle" />
-            </div>
-            <div>
-              <label className="book-label">Approximate Size (Optional)</label>
-              <input className="book-input" type="text" placeholder="e.g., 2x3 inches, Palm-sized" />
+            <div style={{width: '100%'}}>
+              <label className="book-label">Tattoo Idea / Description</label>
+              <textarea className="book-textarea" placeholder="Describe your tattoo idea, including any references, style, elements, etc." required />
+              <div className="book-hint">The more detail, the better we can prepare for your consultation.</div>
             </div>
           </div>
           <button className="book-btn" type="submit">Request Appointment</button>
