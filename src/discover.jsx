@@ -19,8 +19,8 @@ function Discover() {
           where you are able to take your idea and turn it into a permanent piece of art.
         </p>
 
-        <div className="discover-arrow">
-            <img src={Arrow} alt="Arrow" className='arrow'/>
+        <div className="discover-arrows">
+            <img src={Arrow} alt="Arrow" className='arrows'/>
           {/* <span>&#x27A1;&#x27A1;&#x27A1;</span> */}
         </div>
       </div>

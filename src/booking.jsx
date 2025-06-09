@@ -1,4 +1,5 @@
 import React from 'react';
+import HeaderM from './HeaderMobile.jsx'
 import Navbar from './Navbar';
 
 function BookAppointment() {
@@ -166,6 +167,7 @@ function BookAppointment() {
           }
         }
       `}</style>
+      <HeaderM></HeaderM>
       <Navbar />
       <div className="book-container">
         <div className="book-title">Book Your Appointment</div>
