@@ -1,0 +1,36 @@
+.ink-style-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 1rem 2rem;
+  position: relative;
+  width: fit-content;
+  justify-content: flex-start;  /* align content to the left */
+  padding-top: 50px ;
+}
+
+.ink-text {
+  color: white;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  cursor: pointer;
+}
+
+.arrow.left {
+  border-right: 20px solid #f2d55d;
+  margin-right: 1rem;
+}
+
+.arrow.right {
+  border-left: 20px solid #f2d55d;
+  margin-left: 1rem;
+}

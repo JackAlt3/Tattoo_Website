@@ -7,6 +7,10 @@ import NeonText from './neontext.jsx';
 import MidScroll from './midscroll.jsx'
 import Main from './assets/background.jpg'
 import Discover from './discover.jsx';
+import Ink from './inkstyle.jsx'
+import MasterpieceSection from './masterpiece.jsx';
+import Footer from './footer.jsx';
+// import InfiniteScroll from './InfiniteScroll';
 
 function App() {
 let test = {
@@ -23,6 +27,7 @@ let gg = {
   width : '100%',
   objectFit: 'contain',
 }
+const sampleItems = ['🍕', '🍔', '🍟', '🌮', '🍣', '🥗'];
   return (
     <div>
     <HeaderM></HeaderM>
@@ -33,11 +38,16 @@ let gg = {
         <NeonText/>
       </div>
       <Discover></Discover>
+      <Ink></Ink>
+       {/* <InfiniteScroll items={sampleItems} itemWidth={150} /> */}
       <div style = {{overflow : 'hidden', 
       }}>
         <MidScroll/>
-        <h1><a href='/about'>Router</a></h1>
+       <MasterpieceSection></MasterpieceSection> 
+        {/* <h1><a href='/about'>Router</a></h1> */}
+      <Footer></Footer>
       </div>
+      
   </div>
   )
 }

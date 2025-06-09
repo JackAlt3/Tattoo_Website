@@ -7,6 +7,9 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+src/InfiniteScroll.css
+src/InfiniteScroll.jsx
+
 node_modules
 dist
 dist-ssr

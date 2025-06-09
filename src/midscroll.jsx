@@ -106,10 +106,7 @@ function MidScroll() {
       // Scroll reached near the right end, append more items
       setDisplayData((prevData) => [...prevData, ...SAMPLE_DATA]);
     } else if (container.scrollLeft <= threshold) {
-      // Scroll reached near the left end, prepend more items
-      //setDisplayData((prevData) => [...SAMPLE_DATA, ...prevData]);
-      // Adjust scroll position to maintain the user's view
-      //container.scrollLeft += SAMPLE_DATA.length * 220; // Adjust based on card width + gap
+
     }
   };
 
@@ -146,7 +143,6 @@ function MidScroll() {
         <button onClick={() => handleScroll(-200)}>Scroll Left</button>
         <button onClick={() => handleScroll(200)}>Scroll Right</button>
       </div>
-      <h1>//Can use two finger scroll</h1>
     </div>
   );
 }
