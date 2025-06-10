@@ -6,7 +6,7 @@ import Footer from './footer.jsx';
 function Contact() {
   return (
     <>
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display Courier New" rel="stylesheet" />
       <style>{`
         body {
           background: #111;
@@ -61,7 +61,7 @@ function Contact() {
         .contact-form-row {
           display: flex;
           gap: 32px;
-          margin-bottom: 32px;
+          margin-bottom: 48px;
         }
         .contact-form-row > div {
           flex: 1;
@@ -86,7 +86,7 @@ function Contact() {
           background: #18191a;
           color: #fff;
           font-size: 1.08rem;
-          margin-bottom: 0;
+          margin-bottom: 16px;
           font-family: 'Inter', Arial, sans-serif;
           transition: border 0.2s, box-shadow 0.2s;
           box-shadow: 0 1.5px 8px 0 rgba(255,215,0,0.03);
@@ -102,10 +102,11 @@ function Contact() {
         .contact-textarea {
           min-height: 120px;
           resize: vertical;
+          margin-bottom: 0;
         }
-        .contact-btn {
+        .book-btn {
           background: linear-gradient(90deg, #FFD700 0%, #ffea70 100%);
-          color: #111 !important;
+          color: #fff !important;
           font-weight: 700;
           border: none;
           border-radius: 8px;
@@ -119,9 +120,9 @@ function Contact() {
           transition: background 0.2s, color 0.2s, box-shadow 0.2s;
           text-align: center;
         }
-        .contact-btn:hover {
+        .book-btn:hover {
           background: linear-gradient(90deg, #ffe066 0%, #FFD700 100%);
-          color: #111;
+          color: #fff;
           box-shadow: 0 4px 24px 0 rgba(255,215,0,0.18);
         }
         .contact-side {
@@ -138,12 +139,30 @@ function Contact() {
           box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
           border: 1.5px solid #232323;
         }
+        .contact-location {
+          padding: 32px 28px 48px 28px; /* Increased bottom padding to extend vertically */
+          animation: goldenGlow 2s ease-in-out infinite; /* Added golden glow animation */
+        }
+        @keyframes goldenGlow {
+          0% {
+            border-color: #232323;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+          }
+          50% {
+            border-color: #FFD700;
+            box-shadow: 0 8px 32px 0 rgba(255,215,0,0.3);
+          }
+          100% {
+            border-color: #232323;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+          }
+        }
         .contact-info-title, .contact-location-title {
           font-family: 'Playfair Display', serif;
           font-size: 1.15rem;
           font-weight: bold;
           margin-bottom: 18px;
-          color: #FFD700;
+          color: #fff;
         }
         .contact-info-list {
           display: flex;
@@ -158,12 +177,12 @@ function Contact() {
           color: #e6e6e6;
         }
         .contact-info-item i {
-          color: #FFD700;
+          color: #fff;
           font-size: 1.18rem;
         }
         .contact-location-map {
           width: 100%;
-          height: 180px;
+          height: 300px; /* Increased height for larger vertical size */
           border-radius: 10px;
           background: #6c6f75;
           display: flex;
@@ -185,8 +204,14 @@ function Contact() {
           .contact-form-wrapper, .contact-info, .contact-location {
             padding: 18px 8vw;
           }
+          .contact-location {
+            padding: 18px 8vw 36px 8vw; /* Adjusted for mobile */
+          }
           .contact-title {
             font-size: 2rem;
+          }
+          .contact-location-map {
+            height: 240px; /* Adjusted height for mobile */
           }
         }
       `}</style>
@@ -198,13 +223,15 @@ function Contact() {
           Connect with INKROVERT. Whether you have questions about the process, want to discuss a specific design, or are ready to embark on your next tattoo adventure, we're eager to hear from you. Use the form below, or reach out via our contact details. Let's talk ink.
         </div>
         <div className="contact-main-grid">
-          <form className="contact-form-wrapper">
+          <div className="contact-form-wrapper">
             <div className="contact-form-title">Send Us a Message</div>
             <div className="contact-form-row">
               <div>
                 <label className="contact-label">Full Name</label>
                 <input className="contact-input" type="text" placeholder="Your Name" required />
               </div>
+            </div>
+            <div className="contact-form-row">
               <div>
                 <label className="contact-label">Email Address</label>
                 <input className="contact-input" type="email" placeholder="your.email@example.com" required />
@@ -216,15 +243,15 @@ function Contact() {
                 <textarea className="contact-textarea" placeholder="Your message, questions, or ideas..." required />
               </div>
             </div>
-            <button className="contact-btn" type="submit">Send Message</button>
-          </form>
+            <button className="book-btn" type="button">Send Message</button>
+          </div>
           <div className="contact-side">
             <div className="contact-info">
               <div className="contact-info-title">Contact Information</div>
               <div className="contact-info-list">
                 <div className="contact-info-item">
                   <i className="fa fa-map-marker"></i>
-                  Near Pachas cold storage, Madodi wadi, Sandor, Vasai-Virar, Maharashtra 401201
+                  123 Tattoo Street, Art City, AC 12345
                 </div>
                 <div className="contact-info-item">
                   <i className="fa fa-envelope"></i>
@@ -232,7 +259,7 @@ function Contact() {
                 </div>
                 <div className="contact-info-item">
                   <i className="fa fa-phone"></i>
-                  +91 98765 43210
+                  (123) 456-7890
                 </div>
               </div>
             </div>
