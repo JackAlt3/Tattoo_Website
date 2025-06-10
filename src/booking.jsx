@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderM from './HeaderMobile.jsx'
 import Navbar from './Navbar';
+import Footer from './footer.jsx'
 
 function BookAppointment() {
   return (
@@ -115,7 +116,7 @@ function BookAppointment() {
           box-shadow: 0 4px 24px 0 rgba(255,215,0,0.18);
         }
         /* Footer styles */
-        .footer {
+/*         .footer {
           background: #151515;
           color: #e6e6e6;
           padding: 32px 0 18px 0;
@@ -171,7 +172,7 @@ function BookAppointment() {
         }
         .footer-social a:hover {
           color: #FFD700;
-        }
+        } */
         @media (max-width: 900px) {
           .footer-inner {
             flex-direction: column;
@@ -243,8 +244,9 @@ function BookAppointment() {
           </div>
           <button className="book-btn" type="submit">Request Appointment</button>
         </form>
+        
         {/* Footer */}
-        <footer className="footer">
+        {/* <footer className="footer">
           <div className="footer-inner">
             <div className="footer-col">
               <div className="footer-brand">INKROVERT</div>
@@ -267,9 +269,10 @@ function BookAppointment() {
               </div>
             </div>
           </div>
-        </footer>
+        </footer> */}
         {/* Font Awesome CDN for icons */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+              <Footer></Footer>
       </div>
     </>
   );
