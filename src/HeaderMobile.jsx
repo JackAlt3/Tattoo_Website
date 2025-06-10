@@ -33,7 +33,7 @@ function Header() {
     width: '100%',
     height: isMobile ? '35px' : '45px',
     backgroundColor: 'black',
-    zIndex: 1,
+    zIndex: 2,
   };
 
   const leftStyle = {

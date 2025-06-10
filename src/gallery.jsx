@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HeaderM from './HeaderMobile.jsx'
 import Navbar from './Navbar';
 
 const images = [
@@ -107,6 +108,7 @@ function Gallery() {
           object-fit: cover;
         }
       `}</style>
+      <HeaderM/>
       <Navbar />
       <div className="gallery-container">
         <h1 className="gallery-main-title"></h1>

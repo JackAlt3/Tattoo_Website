@@ -27,8 +27,8 @@
 }
 
 .card {
-  width: 250px;
-  height: 400px;
+  width: 300px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +36,9 @@
   background-size: cover;         /* Now set in the CSS */
   background-position: center;    /* Now set in the CSS */
   background-repeat: no-repeat;
+  border-radius: 6px;
   background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
 
@@ -48,78 +49,40 @@
   opacity: 0.4;
 }
 
-.action-btns {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-top: 50px;
-}
-
-.action-btns button {
-  font-size: 15px;
-  font-weight: 500;
-  color: #002d36;
-  background-color: #99c6cf;
-  border-radius: 6px;
-  padding: 10px 25px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-
-.action-btns button:hover {
-  color: #ffffff;
-  background-color: #002d36;
-}
-
-
 .side-btn {
   position: absolute;
   align-items: center;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #99c6cf;
-  color: #002d36;
-  border: none;
-  padding: 12px 18px;
-  font-size: 24px;
-  font-weight: bold;
   cursor: pointer;
   border-radius: 6px;
-  z-index: 100;
+  z-index: 1;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .side-btn.left {
   left: 10px;
   background: url('./assets/button.png') no-repeat center center;
   background-size: contain;
-  width: 60px;
-  height: 60px;
-  border: none;
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: filter 0.3s ease; 
 }
 
 .side-btn.right {
-  right: 10px; /* Position it on the right */
+  right: 20px;
   background: url('./assets/buttonright.png') no-repeat center center;
   background-size: contain;
-  width: 60px;
-  height: 60px;
-  border: none;
-  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 0 transparent); 
+  transition: filter 0.3s ease; 
+}
+.side-btn.left:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)); 
 }
 
-
-.side-btn:hover {
-  background-color: #002d36;
-  color: #ffffff;
+.side-btn.right:hover {
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
 }
-
-/* .side-btn.left {
-  left: 10px;
-}
-
-.side-btn.right {
-  right: 10px;
-} */
