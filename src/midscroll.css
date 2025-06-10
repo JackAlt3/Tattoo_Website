@@ -16,6 +16,16 @@
   white-space: nowrap; /* Prevent wrapping of cards */
 }
 
+/* Hide scrollbar while keeping scroll functionality */
+.scroll-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari and Opera */
+}
+
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
 .card {
   width: 250px;
   height: 400px;
@@ -61,3 +71,55 @@
   color: #ffffff;
   background-color: #002d36;
 }
+
+
+.side-btn {
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #99c6cf;
+  color: #002d36;
+  border: none;
+  padding: 12px 18px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.side-btn.left {
+  left: 10px;
+  background: url('./assets/button.png') no-repeat center center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+.side-btn.right {
+  right: 10px; /* Position it on the right */
+  background: url('./assets/buttonright.png') no-repeat center center;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.side-btn:hover {
+  background-color: #002d36;
+  color: #ffffff;
+}
+
+/* .side-btn.left {
+  left: 10px;
+}
+
+.side-btn.right {
+  right: 10px;
+} */

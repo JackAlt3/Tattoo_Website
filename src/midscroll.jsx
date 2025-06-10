@@ -119,30 +119,31 @@ function MidScroll() {
   }, []);
 
   return (
-    <div className="container" style = {{background: "transparent"}}>
+    <div className="container" style={{ background: "transparent", position: "relative" }}>
+      <button className="side-btn left" onClick={() => handleScroll(-200)}></button>
+
       <div
         ref={containerRef}
+        className="scroll-container"
         style={{
-          width: "100%" ,
+          width: "100%",
           overflowX: "scroll",
           scrollBehavior: "smooth",
-          whiteSpace: "nowrap", // Ensure content scrolls horizontally
+          whiteSpace: "nowrap",
         }}
       >
-        <div className="content-box" style = {{opacity: '1'}}>
+        <div className="content-box" style={{ opacity: "1" }}>
           {displayData.map((item, index) => (
-            <a href={item.link}>
-            <div key={index} className="card" style={{ backgroundImage: `url(${item.image})`}}>
-              <p>{item.id}</p>
-            </div>
+            <a href={item.link} key={index}>
+              <div className="card" style={{ backgroundImage: `url(${item.image})` }}>
+                <p>{item.id}</p>
+              </div>
             </a>
           ))}
         </div>
       </div>
-      <div className="action-btns">
-        <button onClick={() => handleScroll(-200)}>Scroll Left</button>
-        <button onClick={() => handleScroll(200)}>Scroll Right</button>
-      </div>
+
+      <button className="side-btn right" onClick={() => handleScroll(200)}></button>
     </div>
   );
 }

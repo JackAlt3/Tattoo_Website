@@ -27,7 +27,6 @@ let gg = {
   width : '100%',
   objectFit: 'contain',
 }
-const sampleItems = ['🍕', '🍔', '🍟', '🌮', '🍣', '🥗'];
   return (
     <div>
     <HeaderM></HeaderM>
