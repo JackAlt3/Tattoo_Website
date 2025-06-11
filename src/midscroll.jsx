@@ -1,12 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import useIsMobile from "./mobilefinder";
 import "./midScroll.css";
-import image1 from './assets/image1.jpg';
-import image2 from './assets/image2.jpg';
-import image3 from './assets/image3.jpg';
-import image4 from './assets/image4.jpg';
-import image5 from './assets/image5.jpg';
-import image6 from './assets/image6.jpg';
+import image1 from './assets/tattoos/fine.png';
+import image2 from './assets/tattoos/letter.png';
+import image3 from './assets/tattoos/real.png';
+import image4 from './assets/tattoos/matching.png';
+import image5 from './assets/tattoos/mini.png';
+import image6 from './assets/tattoos/geom.png';
 
 function MidScroll() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -14,12 +14,12 @@ function MidScroll() {
   const isMobile = useIsMobile(); 
 
   const SAMPLE_DATA = [
-    { id: "01", image: image1 , link : "http://www.google.com"},
-    { id: "02", image: image2 , link : "www.youtube.com"},
-    { id: "03", image: image3 , link : "www.google.com"},
-    { id: "04", image: image4 , link : "www.google.com"},
-    { id: "05", image: image5 , link : "www.google.com"},
-    { id: "06", image: image6 , link : "www.google.com"},
+    { id: "Line Art & Fine Line Tattoos", image: image1 , link : "http://www.google.com"},
+    { id: "Script & Lettering Tattoos", image: image2 , link : "www.youtube.com"},
+    { id: "Realistic Tattoos", image: image3 , link : "www.google.com"},
+    { id: "Matching Tattoos", image: image4 , link : "www.google.com"},
+    { id: "Minimalist Tattoos", image: image5 , link : "www.google.com"},
+    { id: "Symbolic / Geometric Tattoos", image: image6 , link : "www.google.com"},
   ];
 
   // Double the content to simulate infinite scroll
