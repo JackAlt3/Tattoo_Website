@@ -9,26 +9,46 @@ function BookAppointment() {
       {/* Google Fonts */}
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
       <style>{`
+        @font-face {
+          font-family: 'Moontime';
+          src: url('./assets/moontime.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+        }
         body {
           background: #111;
         }
-      
-}
+        .neon-text-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 40px 0 0 0;
+          min-height: 120px;
+        }
+        .neon-text {
+          font-family: 'Moontime', cursive;
+          font-size: 4.5rem;
+          color: #fff9c4;
+          text-shadow:
+            0 0 5px #fff176,
+            0 0 10px #ffeb3b,
+            0 0 20px #fdd835,
+            0 0 40px #fdd835,
+            0 0 80px #fdd835;
+          line-height: 1;
+          max-width: 700px;
+          margin: 0 auto 0 auto;
+        }
+        .book-title {
+          display: none; /* Hide the old title */
+        }
         .book-container {
           min-height: 100vh;
           background: #111;
-          color: #fff;
+          color: #111;
           font-family: 'Moontime', Arial, sans-serif;
           padding-bottom: 80px;
-        }
-        .book-title {
-          font-family: 'Playfair Display', serif;
-          font-size: 2.7rem;
-          font-weight: bold;
-          text-align: center;
-          margin-top: 36px;
-          margin-bottom: 14px;
-          letter-spacing: 1px;
         }
         .book-desc {
           font-family: 'Playfair Display', serif;
@@ -141,15 +161,17 @@ function BookAppointment() {
           .book-form-wrapper {
             padding: 18px 2vw 18px 2vw;
           }
-          .book-title {
-            font-size: 2rem;
+          .neon-text {
+            font-size: 2.5rem;
           }
         }
       `}</style>
       <HeaderM />
       <Navbar />
       <div className="book-container">
-        <div className="book-title">Book Your Appointment</div>
+        <div className="neon-text-container">
+          <div className="neon-text">Book Your Appointment</div>
+        </div>
         <div className="book-desc">
           Begin your tattoo journey with INKROVERT. Securing your appointment is the first step toward your unique piece of art. Fill out the form below with your ideas, preferred dates, and any references. Our team will personally review your request and contact you to discuss the details and confirm your booking.
         </div>

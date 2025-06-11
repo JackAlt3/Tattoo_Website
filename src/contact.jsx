@@ -6,8 +6,15 @@ import Footer from './footer.jsx';
 function Contact() {
   return (
     <>
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display Courier New" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
       <style>{`
+        @font-face {
+          font-family: 'Moontime';
+          src: url('./assets/moontime.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+        }
+
         body {
           background: #111;
         }
@@ -18,22 +25,35 @@ function Contact() {
           font-family: 'Inter', Arial, sans-serif;
           padding-bottom: 80px;
         }
-        .contact-title {
-          font-family: 'Playfair Display', serif;
-          font-size: 2.7rem;
-          font-weight: bold;
+        .neon-text-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
           text-align: center;
-          margin-top: 36px;
-          margin-bottom: 14px;
-          letter-spacing: 1px;
+          padding: 20px;
+          padding-top: 80px;
+          min-height: 200px;
+        }
+        .neon-text {
+          font-family: 'Moontime', cursive;
+          font-size: 4.5rem;
+          color: #fff9c4;
+          text-shadow:
+            0 0 5px #fff176,
+            0 0 10px #ffeb3b,
+            0 0 20px #fdd835,
+            0 0 40px #fdd835,
+            0 0 80px #fdd835;
+          line-height: 1;
+          max-width: 700px;
         }
         .contact-desc {
           font-family: 'Playfair Display', serif;
           font-size: 1.13rem;
-          color: #e6e6e6;
+          color: #ffffff;
           text-align: center;
           max-width: 700px;
-          margin: 0 auto 38px auto;
+          margin: 0 auto 24px auto;
           line-height: 1.6;
         }
         .contact-main-grid {
@@ -140,21 +160,17 @@ function Contact() {
           border: 1.5px solid #232323;
         }
         .contact-location {
-          padding: 32px 28px 48px 28px; /* Increased bottom padding to extend vertically */
-          animation: goldenGlow 2s ease-in-out infinite; /* Added golden glow animation */
+          padding: 32px 28px 48px 28px;
+          animation: goldenGlow 2s ease-in-out infinite;
         }
         @keyframes goldenGlow {
-          0% {
+          0%, 100% {
             border-color: #232323;
             box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
           }
           50% {
             border-color: #FFD700;
             box-shadow: 0 8px 32px 0 rgba(255,215,0,0.3);
-          }
-          100% {
-            border-color: #232323;
-            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
           }
         }
         .contact-info-title, .contact-location-title {
@@ -174,7 +190,7 @@ function Contact() {
           align-items: center;
           gap: 12px;
           font-size: 1.05rem;
-          color: #e6e6e6;
+          color: #ffffff;
         }
         .contact-info-item i {
           color: #fff;
@@ -182,9 +198,9 @@ function Contact() {
         }
         .contact-location-map {
           width: 100%;
-          height: 300px; /* Increased height for larger vertical size */
+          height: 300px;
           border-radius: 10px;
-          background: #6c6f75;
+          background: #111;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -205,20 +221,22 @@ function Contact() {
             padding: 18px 8vw;
           }
           .contact-location {
-            padding: 18px 8vw 36px 8vw; /* Adjusted for mobile */
+            padding: 18px 8vw 36px 8vw;
           }
-          .contact-title {
-            font-size: 2rem;
+          .neon-text {
+            font-size: 2.5rem;
           }
           .contact-location-map {
-            height: 240px; /* Adjusted height for mobile */
+            height: 240px;
           }
         }
       `}</style>
       <HeaderM />
       <Navbar />
       <div className="contact-container">
-        <div className="contact-title">Get In Touch</div>
+        <div className="neon-text-container">
+          <div className="neon-text">Get In Touch</div>
+        </div>
         <div className="contact-desc">
           Connect with INKROVERT. Whether you have questions about the process, want to discuss a specific design, or are ready to embark on your next tattoo adventure, we're eager to hear from you. Use the form below, or reach out via our contact details. Let's talk ink.
         </div>
