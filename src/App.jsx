@@ -39,8 +39,8 @@ let gg = {
       <Discover></Discover>
       <Ink></Ink>
        {/* <InfiniteScroll items={sampleItems} itemWidth={150} /> */}
-      <div style = {{overflow : 'hidden', 
-      }}>
+        <div style={{ overflowX: 'hidden', overflowY: 'visible' }}>
+
         <MidScroll/>
        <MasterpieceSection></MasterpieceSection> 
         {/* <h1><a href='/about'>Router</a></h1> */}

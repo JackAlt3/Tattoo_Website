@@ -1,3 +1,12 @@
-button:hover {
- background-color: gray;
+
+
+.icon-link svg {
+  color: white; /* Default icon color */
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover svg {
+  /* filter: drop-shadow(0 0 5px yellow); */
+  color: #ffeb3b;
+  transition: all 0.3s ease;
 }
