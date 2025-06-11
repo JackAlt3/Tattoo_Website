@@ -12,11 +12,13 @@ function BookAppointment() {
         body {
           background: #111;
         }
+      
+}
         .book-container {
           min-height: 100vh;
           background: #111;
           color: #fff;
-          font-family: 'Inter', Arial, sans-serif;
+          font-family: 'Moontime', Arial, sans-serif;
           padding-bottom: 80px;
         }
         .book-title {

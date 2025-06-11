@@ -5,6 +5,7 @@ import App from './App.jsx'
 import Gallery from './gallery.jsx';
 import Contact from './contact.jsx';
 import Booking from './booking.jsx';
+import Offer from './offer.jsx';
 import Appoint from './Appontform.jsx';
 import './index.css'
 
@@ -16,9 +17,11 @@ createRoot(document.getElementById('root')).render(
           <Route path="/about" element={<Appoint />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/home" element={<HOME />} /> */}
+          
+          <Route path="/offer" element={<Offer />} />
           <Route path="/booking" element={<Booking/>} />
-          <Route path="/contact" element={<contact />} />
+          
+          
         </Routes>
       </Router>
   </StrictMode>
