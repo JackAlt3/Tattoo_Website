@@ -1,8 +1,7 @@
-
 @font-face {
     font-family: 'AlexBrush-Regular';
     src: url('/fonts/AlexBrush-Regular.ttf') format('truetype');
-    }
+}
 
 .masterpiece-wrapper {
   position: relative;
@@ -41,16 +40,7 @@
   margin-bottom: 1rem;
     color: #ffeb3b;
   white-space: nowrap;
-  /* text-shadow:
-    0 0 5px #fff176,
-    0 0 10px #ffeb3b,
-    0 0 20px #fdd835,
-    0 0 40px #fdd835,
-    0 0 80px #fdd835; */
 }
-
-
-
 
 .description {
   font-family: sans-serif;
@@ -74,9 +64,11 @@
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   border: none;
+  font-family: 'Poppins', sans-serif; /* Or any other consistent font */
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .btn:hover {

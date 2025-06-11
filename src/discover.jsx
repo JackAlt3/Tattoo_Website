@@ -20,7 +20,9 @@ function Discover() {
         </p>
 
         <div className="discover-arrows">
+            <a href='/gallery'>
             <img src={Arrow} alt="Arrow" className='arrows'/>
+            </a>
           {/* <span>&#x27A1;&#x27A1;&#x27A1;</span> */}
         </div>
       </div>

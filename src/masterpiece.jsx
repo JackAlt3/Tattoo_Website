@@ -15,8 +15,10 @@ const MasterpieceSection = () => {
           our artists are here to guide you...
         </p>
         <div className="buttons">
-          <button className="btn">Book Appointment</button>
-          <button className="btn">Contact Us</button>
+          <a href="/booking" className="btn" >Book Appointment</a>
+          {/* <button className="btn">Book Appointment</button> */}
+          <a href="/contact" className="btn" >Contact Us</a>
+          {/* <button className="btn">Contact Us</button> */}
         </div>
       </div>
       {/* <img src={leafImage} alt="Leaf Right" className="leaf right-leaf" /> */}

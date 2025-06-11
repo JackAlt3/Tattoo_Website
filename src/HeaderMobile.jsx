@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MapPin, Phone as PhoneIcon, Instagram, MessageCircleMore } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import Logo from './assets/logocrop.png';
-// import Sidebar from './assets/sidebar.svg';
-import Whatsapp from './assets/whatsapp.svg';
-import Phone from './assets/phone.svg';
-import Location from './assets/location.svg';
 import './header.css';
 
 function Header() {
@@ -88,7 +85,8 @@ function Header() {
 </a>
 
 <a href="http://api.whatsapp.com/send?phone=7507209441" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <MessageCircleMore  size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+  {/* <MessageCircleMore  size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} /> */}
+  <FaWhatsapp size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }}/>
 </a>
 
 <a href="tel:+917507209441" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Mail, Send, Phone, Linkedin } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -16,20 +17,20 @@ const Footer = () => {
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/gallery">Gallery</a></li>
-            <li><a href="#">Offers</a></li>
-            <li><a href="#">Book Appointment</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/offers">Offers</a></li>
+            <li><a href="/booking">Book Appointment</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div>
 
         <div className="footer-column footer-center">
           <h4>Connect With Us</h4>
           <div className="footer-icons">
-            <a href="#"><Instagram /></a>
+            <a href="https://www.instagram.com/_inkrovert_tattooos"><Instagram /></a>
             <a href="#"><Mail /></a>
-            <a href="#"><Send /></a>
-            <a href="#"><Phone /></a>
-            <a href="#"><Linkedin /></a>
+            <a href="http://api.whatsapp.com/send?phone=7507209441"><FaWhatsapp size={25} /></a>
+            <a href="tel:+917507209441"><Phone /></a>
+            <a href="https://www.linkedin.com/in/inkrovert-tattoos-577b5732b/"><Linkedin /></a>
           </div>
         </div>
       </div>
