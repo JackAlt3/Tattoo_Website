@@ -38,14 +38,12 @@ function Header() {
 
   const leftStyle = {
     width: isMobile ? '30%' : '50%',
-    //width: '50%',
     display: 'inline-block',
     verticalAlign: 'middle',
   };
 
   const rightStyle = {
     width: isMobile ? '70%' : '50%',
-    //width: '50%',
     display: 'inline-block',
     textAlign: 'right',
   };
@@ -58,7 +56,6 @@ function Header() {
   };
 
   const buttonStyle = {
-    //marginTop: '10px',
     borderRadius: '5px',
     width: isMobile ? '50px' : '80px', // Adjust button size based on mobile or desktop
     height: isMobile ? '35px' : '50px',
@@ -66,7 +63,6 @@ function Header() {
   };
   
   const imagr = {
-   // borderRadius: '5px',
     width: isMobile ? '50px' : '80px', // Adjust button size based on mobile or desktop
     height: isMobile ? '35px' : '50px',
     display: isMobile ? '' : 'none',
@@ -79,7 +75,6 @@ function Header() {
     width:'100px', // Adjust button size based on mobile or desktop
     height:'20px',
     display: isMobile ? 'none' : '',
-    //marginLeft: '10px',
   };
 
   return (
@@ -88,20 +83,20 @@ function Header() {
         <img src={Logo} alt="Logo" style={logoStyle} />
       </div>
       <div style={rightStyle}>
-<a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <MapPin color="white" size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+<a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <MapPin  size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
-<a href="http://api.whatsapp.com/send?phone=7507209441" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <MessageCircleMore color="white" size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+<a href="http://api.whatsapp.com/send?phone=7507209441" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <MessageCircleMore  size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
-<a href="tel:+917507209441" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
-  <PhoneIcon color="white" size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
+<a href="tel:+917507209441" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
+  <PhoneIcon  size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
-<a href="https://www.instagram.com" style={{ marginLeft: '10px', verticalAlign: 'middle' ,paddingRight: '15px', }}>
-  <Instagram color="white" size={isMobile ? 24 : 24} style={{ verticalAlign: 'middle' }} />
+<a href="https://www.instagram.com" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' ,paddingRight: '15px', }}>
+  <Instagram  size={isMobile ? 24 : 24} style={{ verticalAlign: 'middle' }} />
 </a>
       </div>
     </div>
