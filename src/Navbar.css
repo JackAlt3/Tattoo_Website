@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   font-family: sans-serif;
   position: relative; /* Required for ::after positioning */
   z-index: 1;
@@ -14,7 +14,7 @@
 .nav-link {
   color: white;
   text-decoration: none;
-  margin: 0 40px;
+  /* margin: 0 40px; */
   font-size: 12px;
   letter-spacing: 1px;
   position: relative;
@@ -46,6 +46,6 @@
   transform: translateX(-50%);
   width: 95%;
   height: 1px;
-  background-color: rgb(255, 255, 255); /* faint white line */
+  background-color: rgb(103, 101, 101); /* faint white line */
   z-index: -1; /* ensure it's beneath the nav */
 }
