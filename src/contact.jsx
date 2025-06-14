@@ -47,7 +47,7 @@ function Contact() {
           max-width: 700px;
         }
         .contact-desc {
-          font-family: 'Playfair Display', serif;
+          font-family:'Inter','Arial',Sans-serif;
           font-size: 1.13rem;
           color: #ffffff;
           text-align: center;
