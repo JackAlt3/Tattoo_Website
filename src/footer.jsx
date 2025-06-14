@@ -1,6 +1,7 @@
 import React from 'react';
 import { Instagram, Mail, Send, Phone, Linkedin } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -16,10 +17,10 @@ const Footer = () => {
         <div className="footer-column footer-center">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/offer">Offers</a></li>
-            <li><a href="/booking">Book Appointment</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+            <li><Link to="/gallery">Gallery</Link></li>
+            <li><Link to="/offer">Offers</Link></li>
+            <li><Link to="/booking">Book Appointment</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
 

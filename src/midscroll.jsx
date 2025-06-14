@@ -55,9 +55,15 @@ function MidScroll() {
     };
   }, []);
 
+  let mob = {
+    height : isMobile ? '350px' : '500px' , 
+    width : isMobile ? '210px' : '300px' , 
+    marginLeft : isMobile ? '5px' : '30px', 
+}
+
   return (
-    <div className="container" style={{ background: "transparent", position: "relative" }}>
-      <button className="side-btn left" onClick={() => handleScroll(-200)}></button>
+    <div className="container" style={{ background: "transparent", position: "relative" , height: isMobile ? '55vh' : '80vh' }}>
+      <button className="side-btn left" style={{display : isMobile ? 'none' : ''}} onClick={() => handleScroll(-200)}></button>
 
       <div
         ref={containerRef}
@@ -72,8 +78,8 @@ function MidScroll() {
         <div className="content-box" style={{ opacity: "1" }}>
           {displayData.map((item, index) => (
             <a href={item.link} key={index}>
-              <div className="card" style={{ backgroundImage: `url(${item.image})` }}>
-                <div className="card-footer">
+              <div className="card" style={{ ...mob , backgroundImage: `url(${item.image})`}}>
+                <div className="card-footer" style={{fontSize : isMobile ? '15px' : '18px'}}>
                 <p>{item.id}</p>
               </div>
               </div>
@@ -82,7 +88,7 @@ function MidScroll() {
         </div>
       </div>
 
-      <button className="side-btn right" onClick={() => handleScroll(200)}></button>
+      <button className="side-btn right" style={{display : isMobile ? 'none' : ''}} onClick={() => handleScroll(200)}></button>
     </div>
   );
 }

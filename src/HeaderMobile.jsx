@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MapPin, Phone as PhoneIcon, Instagram, MessageCircleMore } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import Logo from './assets/logocrop.png';
+import Logomobile from './assets/logomobile.png'
 import './header.css';
 
 function Header() {
@@ -46,10 +47,10 @@ function Header() {
   };
 
   const logoStyle = {
-    paddingTop: '20px',
+    paddingTop: isMobile ? '8px' : '20px',
     paddingLeft: '10px',
-    width: isMobile ? '155px' : '170px', // Adjust based on mobile or desktop
-    height: isMobile ? '65px' : '50px',
+    width: isMobile ? '135px' : '170px', // Adjust based on mobile or desktop
+    height: isMobile ? '30px' : '50px',
   };
 
   const buttonStyle = {
@@ -77,7 +78,7 @@ function Header() {
   return (
     <div style={containerStyle}>
       <div style={leftStyle}>
-        <img src={Logo} alt="Logo" style={logoStyle} />
+        <img src={isMobile ? Logomobile : Logo} alt="Logo" style={logoStyle} />
       </div>
       <div style={rightStyle}>
 <a href="https://maps.app.goo.gl/oYzeQzUGmfkcrMkg8" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' }}>
@@ -93,7 +94,7 @@ function Header() {
   <PhoneIcon  size={isMobile ? 24 : 24} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
 </a>
 
-<a href="https://www.instagram.com" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' ,paddingRight: '15px', }}>
+<a href="https://www.instagram.com/_inkrovert_tattooos" className="icon-link" style={{ marginLeft: '10px', verticalAlign: 'middle' ,paddingRight: '15px', }}>
   <Instagram  size={isMobile ? 24 : 24} style={{ verticalAlign: 'middle' }} />
 </a>
       </div>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import useIsMobile from './mobilefinder.jsx'
 
 function Midtext() {
+  const isMobile = useIsMobile();
   const texts = [
     "you.", "your story.", "your vibe.", "your soul.", "your scars.",
     "your journey.", "your fire.", "your truth.", "your shadow.", 
