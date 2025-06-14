@@ -95,7 +95,7 @@ function Midtext() {
         }
       `}</style>
 
-      <span className={`title ${isDisappearing ? 'disappearing' : ''}`}>
+      <span className={`title ${isDisappearing ? 'disappearing' : ''}`} style={{fontSize : isMobile ? '3.5rem' : '4.5rem',}}>
         {letters.map((ltrObj, idx) => (
           <span
             key={idx}

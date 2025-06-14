@@ -92,3 +92,52 @@
   right: -45px;
   transform: rotate(180deg) scaleX(1);
 }
+
+
+@media (max-width: 768px) {
+
+  .masterpiece-wrapper {
+  padding: 2rem 1rem;
+  }
+
+  .masterpiece-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .titles {
+    font-size: 2rem;
+    white-space: normal;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .btn {
+    width: 140px; /* or set a % or max-width if needed */
+    margin: 0;
+  }
+
+  .leaf {
+    height: 130px;
+  }
+
+  .left-leaf {
+    top: -25px;
+    left: -25px;
+  }
+
+  .right-leaf {
+    bottom: -20px;
+    right: -20px;
+  }
+}

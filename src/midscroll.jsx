@@ -62,7 +62,7 @@ function MidScroll() {
 }
 
   return (
-    <div className="container" style={{ background: "transparent", position: "relative" , height: isMobile ? '55vh' : '80vh' }}>
+    <div className="container" style={{ background: "transparent", position: "relative" , minHeight: isMobile ? '390px' : '520px', height: "auto",  }}>
       <button className="side-btn left" style={{display : isMobile ? 'none' : ''}} onClick={() => handleScroll(-200)}></button>
 
       <div

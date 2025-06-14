@@ -69,3 +69,42 @@
   height: 75px;
   width: 125px;
 }
+
+@media screen and (max-width: 768px) {
+  .discover-container {
+    flex-direction: column;
+    height: auto; /* Allow height to grow */
+  }
+
+  .discover-left {
+    display: none; /* Already handled inline */
+  }
+
+  .discover-right {
+    height: 100vh; /* Same as desktop */
+    overflow-y: auto; /* Enable scroll if content overflows */
+    padding: 40px 20px; /* Slightly tighter on mobile */
+    justify-content: center;
+  }
+
+  .discover-heading {
+    font-size: 5rem; /* Keep same size */
+    transform: translateY(-20px);
+  }
+
+  .discover-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+  }
+
+  .discover-arrows {
+    margin-top: 30px;
+  }
+
+  .arrows {
+    height: 75px;
+    width: 125px;
+  }
+}
+

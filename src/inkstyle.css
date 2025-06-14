@@ -34,3 +34,30 @@
   border-left: 20px solid #f2d55d;
   margin-left: 1rem;
 }
+
+
+/* ---------- Mobile Styling ---------- */
+@media (max-width: 768px) {
+  .ink-style-container {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .ink-text {
+    font-size: 1.3rem;
+    white-space: normal; /* allow wrapping */
+  }
+
+  .arrow {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+  }
+
+  .arrow.left {
+    border-right: 15px solid #f2d55d;
+  }
+
+  .arrow.right {
+    border-left: 15px solid #f2d55d;
+  }
+}

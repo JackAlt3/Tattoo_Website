@@ -1,5 +1,6 @@
 import React from 'react';
 import './Discover.css';
+import { Link } from 'react-router-dom';
 import Arrow from './assets/arrow.png'; // Or replace with a suitable icon/SVG
 import useIsMobile from './mobilefinder.jsx'
 import Artist from './assets/artist.jpg';
@@ -22,10 +23,9 @@ function Discover() {
         </p>
 
         <div className="discover-arrows">
-            <a href='/gallery'>
+            <Link to="/gallery" >
             <img src={Arrow} alt="Arrow" className='arrows'/>
-            </a>
-          {/* <span>&#x27A1;&#x27A1;&#x27A1;</span> */}
+           </Link>
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import React from 'react';
 import './masterpiece.css';
+import { Link } from 'react-router-dom';
 import leafImage from './assets/leaf.png'; // make sure this path is correct
+import useIsMobile from './mobilefinder.jsx'
 
 const MasterpieceSection = () => {
+  const isMobile = useIsMobile();
   return (
     <div className="masterpiece-wrapper">
-      {/* <img src={leafImage} alt="Leaf Left" className="leaf left-leaf" /> */}
       <div className="masterpiece-box">
         <img src={leafImage} alt="Leaf Left" className="leaf left-leaf" />
         <img src={leafImage} alt="Leaf Right" className="leaf right-leaf" />
@@ -15,13 +17,10 @@ const MasterpieceSection = () => {
           our artists are here to guide you...
         </p>
         <div className="buttons">
-          <a href="/booking" className="btn" >Book Appointment</a>
-          {/* <button className="btn">Book Appointment</button> */}
-          <a href="/contact" className="btn" >Contact Us</a>
-          {/* <button className="btn">Contact Us</button> */}
+          <Link to="/booking" className="btn" >Book Appoinment</Link>
+          <Link to="/contact" className="btn" >Contact Us</Link>
         </div>
       </div>
-      {/* <img src={leafImage} alt="Leaf Right" className="leaf right-leaf" /> */}
     </div>
   );
 };
