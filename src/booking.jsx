@@ -124,7 +124,7 @@ function BookAppointment() {
           background: linear-gradient(90deg, #FFD700 0%, #ffea70 100%);
           color: #fff !important;
           font-weight: 700;
-          border: none;
+          border: 2.5px solid #FFD700;
           border-radius: 8px;
           padding: 18px 0;
           font-size: 1.15rem;
@@ -133,13 +133,14 @@ function BookAppointment() {
           box-shadow: 0 2px 12px 0 rgba(255,215,0,0.10);
           cursor: pointer;
           letter-spacing: 0.5px;
-          transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+          transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
           text-align: center;
         }
         .book-btn:hover {
           background: linear-gradient(90deg, #ffe066 0%, #FFD700 100%);
           color: #fff;
-          box-shadow: 0 4px 24px 0 rgba(255,215,0,0.18);
+          border-color: #fff176;
+          box-shadow: 0 4px 24px 0 rgba(255,215,0,0.18), 0 0 16px 4px #FFD700;
         }
         @media (max-width: 900px) {
           .book-form-wrapper {

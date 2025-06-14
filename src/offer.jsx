@@ -8,6 +8,12 @@ function Offer() {
     <>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
       <style>{`
+        @font-face {
+          font-family: 'Moontime';
+          src: url('./assets/moontime.ttf') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+        }
         body {
           background: #111;
         }
@@ -19,14 +25,24 @@ function Offer() {
           padding-bottom: 80px;
         }
         .offer-title {
-          font-family: 'Playfair Display', serif;
-          font-size: 2.7rem;
-          font-weight: bold;
+          font-family: 'Moontime', cursive;
+          font-size: 4.5rem;
+          font-weight: normal;
           text-align: center;
           margin-top: 36px;
           margin-bottom: 14px;
           letter-spacing: 1px;
-          color: #FFD700;
+          color: #fff9c4;
+          text-shadow:
+            0 0 5px #fff176,
+            0 0 10px #ffeb3b,
+            0 0 20px #fdd835,
+            0 0 40px #fdd835,
+            0 0 80px #fdd835;
+          line-height: 1;
+          max-width: 700px;
+          margin-left: auto;
+          margin-right: auto;
         }
         .offer-desc {
           font-family: 'Playfair Display', serif;
@@ -97,7 +113,7 @@ function Offer() {
         }
         @media (max-width: 600px) {
           .offer-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
           }
           .offer-card {
             padding: 24px 10vw 18px 10vw;

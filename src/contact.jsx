@@ -30,9 +30,8 @@ function Contact() {
           justify-content: center;
           align-items: center;
           text-align: center;
-          padding: 20px;
-          padding-top: 80px;
-          min-height: 200px;
+          padding: 40px 0 0 0;
+          min-height: 120px;
         }
         .neon-text {
           font-family: 'Moontime', cursive;
