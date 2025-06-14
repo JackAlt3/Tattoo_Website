@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
-import HeaderM from './HeaderMobile.jsx'
+import HeaderM from './HeaderMobile.jsx';
 import Navbar from './Navbar';
+import image1 from './assets/tattoos/fine.png';
+import image2 from './assets/tattoos/letter.png';
+import image3 from './assets/tattoos/real.png';
+import image4 from './assets/tattoos/matching.png';
+import image5 from './assets/tattoos/mini.png';
+import image6 from './assets/tattoos/geom.png';
 
 const images = [
-  { src: '/images/tattoo1.jpg', alt: 'Tattoo 1', type: 'Abstract' },
-  { src: '/images/tattoo2.jpg', alt: 'Tattoo 2', type: 'Realism' },
-  { src: '/images/tattoo3.jpg', alt: 'Tattoo 3', type: 'Minimal' },
-  { src: '/images/tattoo4.jpg', alt: 'Tattoo 4', type: 'Abstract' },
-  { src: '/images/tattoo5.jpg', alt: 'Tattoo 5', type: 'Realism' },
-  { src: '/images/tattoo6.jpg', alt: 'Tattoo 6', type: 'Minimal' },
-  { src: '/images/tattoo7.jpg', alt: 'Tattoo 7', type: 'Abstract' },
-  { src: '/images/tattoo8.jpg', alt: 'Tattoo 8', type: 'Realism' },
+  { src: image1, alt: 'Tattoo 1', type: 'Abstract' },
+  { src: image2 , alt: 'Tattoo 2', type: 'Realism' },
+  { src: image3 , alt: 'Tattoo 3', type: 'Minimal' },
+  { src: image4 , alt: 'Tattoo 4', type: 'Abstract' },
+  { src: image5 , alt: 'Tattoo 5', type: 'Realism' },
+  { src: image6 , alt: 'Tattoo 6', type: 'Minimal' },
+  { src: image1 , alt: 'Tattoo 7', type: 'Abstract' },
+  { src: image2, alt: 'Tattoo 8', type: 'Realism' },
 ];
 
 const types = ['All', 'Abstract', 'Realism', 'Minimal'];
@@ -108,12 +114,12 @@ function Gallery() {
           object-fit: cover;
         }
       `}</style>
-      <HeaderM/>
+      <HeaderM />
       <Navbar />
       <div className="gallery-container">
-        <h1 className="gallery-main-title"></h1>
+        <h1 className="gallery-main-title">Gallery</h1>
         <div className="gallery-description">
-          
+          Explore our curated collection of tattoo styles and inspirations.
         </div>
         <div className="gallery-filters">
           {types.map(type => (
