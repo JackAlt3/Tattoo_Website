@@ -1,12 +1,14 @@
 import React from 'react';
 import './Discover.css';
 import Arrow from './assets/arrow.png'; // Or replace with a suitable icon/SVG
+import useIsMobile from './mobilefinder.jsx'
 import Artist from './assets/artist.jpg';
 
 function Discover() {
+  const isMobile = useIsMobile();
   return (
     <div className="discover-container">
-      <div className="discover-left">
+      <div className="discover-left" style={{ display : isMobile ? 'none' : 'flex'}}>
         <img src={Artist} alt="Tattoo Artist" className="discover-image" />
       </div>
 
