@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route,} from "react-router-dom";
+import { HashRouter as Router, Routes, Route,} from "react-router-dom";
 import App from './App.jsx'
-import Gallery from './gallery.jsx';
+import Gallery from './gallery2.jsx';
 import Contact from './contact.jsx';
 import Booking from './booking.jsx';
 import Offer from './offer.jsx';
@@ -17,11 +17,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/about" element={<Appoint />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          
           <Route path="/offer" element={<Offer />} />
           <Route path="/booking" element={<Booking/>} />
-          
-          
         </Routes>
       </Router>
   </StrictMode>
