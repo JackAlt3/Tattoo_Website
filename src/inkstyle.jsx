@@ -1,5 +1,5 @@
 import React from 'react';
-import './InkStyle.css';
+import './inkstyle.css';
 
 const InkStyleSelector = () => {
   return (
