@@ -1,5 +1,5 @@
 import React from 'react';
-import './NeonText.css';
+import './neonText.css';
 import Midtxt from './Midtext.jsx'
 import useIsMobile from './mobilefinder.jsx'
 
