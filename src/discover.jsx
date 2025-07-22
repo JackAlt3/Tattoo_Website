@@ -1,5 +1,5 @@
 import React from 'react';
-import './Discover.css';
+import './discover.css';
 import { Link } from 'react-router-dom';
 import Arrow from './assets/arrow.png'; // Or replace with a suitable icon/SVG
 import useIsMobile from './mobilefinder.jsx'
