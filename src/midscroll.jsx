@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import useIsMobile from "./mobilefinder";
-import "./midScroll.css";
+import "./midscroll.css";
 import image1 from './assets/tattoos/fine.png';
 import image2 from './assets/tattoos/letter.png';
 import image3 from './assets/tattoos/real.png';
