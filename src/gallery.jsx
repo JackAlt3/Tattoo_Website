@@ -5,8 +5,9 @@ import image1 from './assets/tattoos/fine.png';
 import image2 from './assets/tattoos/letter.png';
 import image3 from './assets/tattoos/real.png';
 import image4 from './assets/tattoos/matching.png';
-import image5 from './assets/tattoos/mini.png';
 import image6 from './assets/tattoos/geom.png';
+import image5 from './assets/tattoos/mini.png';
+
 
 const images = [
   { src: image1, alt: 'Tattoo 1', type: 'Abstract' },
